@@ -8,6 +8,15 @@ window.onload = function () {
     .slice(0, 5);
 };
 
+function validateForm() {
+  const vehiclePlate = document.getElementById('vehiclePlate').value.trim();
+  if (vehiclePlate === "") {
+    alert("Vehicle Plate is mandatory.");
+    return false;
+  }
+  return true;
+}
+
 // Form submission to Google Sheet
 document
   .getElementById("inboundForm")
